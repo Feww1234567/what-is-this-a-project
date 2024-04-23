@@ -80,3 +80,45 @@ header img {
     overflow-x: hidden; /* เปลี่ยนเป็น hidden เพื่อซ่อนแถบเลื่อน */
     scroll-snap-type: x mandatory; /* ทำให้เลื่อนตามขอบของรูป */
 }
+
+/* เพิ่มเข้าไปที่ท้ายไฟล์ style.css */
+
+/* เมื่อหน้าจอมีความกว้างน้อยกว่าหรือเท่ากับ 768px */
+@media screen and (max-width: 768px) {
+    /* ปรับขนาดโลโก้ */
+    .logo img {
+        width: 40px;
+    }
+
+    /* ปรับรูปแบบของ header */
+    header {
+        flex-direction: column;
+    }
+
+    /* ปรับขนาด font และ padding ของข้อความใน header */
+    header .left h1 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    /* ปรับขนาดรูปภาพใน header */
+    header img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ปรับขนาดข้อความใน .sell-nft */
+    .sell-nft .item p {
+        font-size: 0.8rem;
+    }
+
+    /* ปรับขนาดข้อความใน .nft-list */
+    .nft-list .item .info h5 {
+        font-size: 0.9rem;
+    }
+
+    /* ปรับขนาดข้อความใน .sellers */
+    .sellers .item .info h4 {
+        font-size: 0.9rem;
+    }
+}
