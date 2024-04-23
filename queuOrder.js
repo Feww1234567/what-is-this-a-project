@@ -29,15 +29,4 @@ class Queue{
 
 let myQeue = new Queue
 
-function on() {
-    document.getElementById("overlay").style.display = "block";
-    console.log(myQeue)
-    console.log(myQeue.getSize())
-    let data = myQeue.enQueue()
-    console.log(data)
-    console.log(myQeue.getSize())
-}
 
-function off() {
-    document.getElementById("overlay").style.display = "none";
-}

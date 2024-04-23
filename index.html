@@ -111,6 +111,8 @@
     <br>
     <div class="BoxTopp"></div>
 
+    <!-- Individual Product Details -->
+    <!-- Product 1 -->
     <div class="image-container ">
         <img src="img/15s.jpg" alt="" width="250" height="200"> 
         <div class="image-details">
@@ -123,16 +125,19 @@
             <p>Capacity 256GB-1TB</p>
             <p>Price: 48,900 Baht</p>
         </div>
-        <a href="#" class="order-button" onclick="on()">จองสินค้า</a>
+        <a href="#" class="order-button" onclick="on('Iphone 15 Pro Max')">จองสินค้า</a>
+        <!-- Popup -->
         <div id="overlay">
             <div id="popup">
                 <span id="close-btn" onclick="off()">×</span>
-                <h2>จองสินค้าสำเร็จ</h2>
-                <p>ขอบคุณที่จองสินค้า Iphone 15 Pro Max เราจะทำการเนินการให้เร็วที่สุด</p>
+                <h2 id="popup-title">จองสินค้าสำเร็จ</h2>
+                <p id="popup-message">ขอบคุณที่จองสินค้า Iphone 15 Pro Max เราจะทำการเนินการให้เร็วที่สุด</p>
                 <button onclick="off()">ปิด</button>
             </div>
         </div>
     </div>    
+
+    <!-- Product 2 -->
     <div class="image-container "> 
         <img src="img/sam.jpg" alt="" width="250" height="200"> 
         <div class="image-details">
@@ -145,17 +150,19 @@
             <p>Capacity 256GB-1TB</p>
             <p>Price: 46,900 Baht</p>
         </div>
-        <a href="#" class="order-button" onclick="on()">จองสินค้า</a>
+        <a href="#" class="order-button" onclick="on('Samsung Galaxy S24 Ultra')">จองสินค้า</a>
+        <!-- Popup -->
         <div id="overlay">
             <div id="popup">
                 <span id="close-btn" onclick="off()">×</span>
-                <h2>จองสินค้าสำเร็จ</h2>
-                <p>ขอบคุณที่จองสินค้า Samsung Galaxy S24 Ultra เราจะทำการเนินการให้เร็วที่สุด</p>
+                <h2 id="popup-title">จองสินค้าสำเร็จ</h2>
+                <p id="popup-message">ขอบคุณที่จองสินค้า Samsung Galaxy S24 Ultra เราจะทำการเนินการให้เร็วที่สุด</p>
                 <button onclick="off()">ปิด</button>
             </div>
         </div>
     </div>
 
+    <!-- Product 3 -->
     <div class="image-container "> 
         <img src="img/xi.jpg" alt="" width="250" height="200"> 
         <div class="image-details">
@@ -168,16 +175,27 @@
             <p>Capacity 256GB</p>
             <p>Price: 25,900 Baht</p>
         </div>
-        <a href="#" class="order-button" onclick="on()">จองสินค้า</a>
+        <a href="#" class="order-button" onclick="on('Xiaomi Mi 11 Ultra')">จองสินค้า</a>
+        <!-- Popup -->
         <div id="overlay">
             <div id="popup">
                 <span id="close-btn" onclick="off()">×</span>
-                <h2>จองสินค้าสำเร็จ</h2>
-                <p>ขอบคุณที่จองสินค้า Xiaomi Mi 11 Ultra เราจะทำการเนินการให้เร็วที่สุด</p>
+                <h2 id="popup-title">จองสินค้าสำเร็จ</h2>
+                <p id="popup-message">ขอบคุณที่จองสินค้า Xiaomi Mi 11 Ultra เราจะทำการเนินการให้เร็วที่สุด</p>
                 <button onclick="off()">ปิด</button>
             </div>
         </div>
     </div>
-    <script src="queuOrder.js"></script>
+    <script>
+        function on(productName) {
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("popup-title").innerText = "จองสินค้าสำเร็จ";
+            document.getElementById("popup-message").innerText = "ขอบคุณที่จองสินค้า " + productName + " เราจะทำการเนินการให้เร็วที่สุด";
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
 </body>
 </html>
