@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ขายของ</title>
+    <link rel="stylesheet" href="UXUI copy.css"> 
+    <style>
+        /* CSS styles here */
+        .image-container {
+            position: relative;
+            display: flex;
+            align-items: flex-start; 
+            margin-bottom: 25px; 
+        }
+        .image-details {
+            margin-left: 20px; 
+            margin-top: 10px; 
+            justify-content: space-between;
+        }
+        .order-button {
+            margin-top: auto; 
+            margin-left: 10px; 
+            font-size: 17px; 
+            background-color: black; 
+            color: white; 
+            border-radius: 300px; 
+            padding: 10px 30px; 
+            text-decoration: none; 
+            border: none; 
+            cursor: pointer;
+        }
+        .order-button:hover {
+            background-color: #333; 
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        #popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+        }
+        #popup h2 {
+            margin-bottom: 10px;
+        }
+        #popup p {
+            margin-bottom: 10px;
+        }
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        
+        }
+        .topthree {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+          }
+        .topthree img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 200px; /* กำหนดขนาดภาพที่ต้องการ */
+            height: 200px; /* กำหนดขนาดภาพที่ต้องการ */
+            margin-right: 100px; /* ระยะห่างระหว่างภาพ */
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 0 0 5px rgb(102, 102, 102);
+          }
+          .Headther{
+            font-size: 50px;
+            transform: translate(30px, 30px);
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="img/head.png" alt="logo">
+        </div>
+    </header>
+
+    <div>
+        <h1 class="Headther">
+            สินค้าที่สามารถจองได้ขณะนี้
+        </h1>
+    </div>
+    <br>
+
+    <div class="topthree">
+        <img src="img/15s.jpg" alt="" class="imgg1">
+        <img src="img/sam.jpg" alt="" class="imgg2">
+        <img src="img/xi.jpg" alt="" class="imgg3">
+    </div>
+    <br>
+    <div class="BoxTopp"></div>
+
+    <div class="image-container ">
+        <img src="img/15s.jpg" alt="" width="250" height="200"> 
+        <div class="image-details">
+            <h2>Iphone 15 Pro Max</h2>
+            <h4>Details</h4>
+            <p>Chip A17 Pro</p>
+            <p>Camera Main 48MP: 24 mm</p>
+            <p>Display 6.7 inch</p>
+            <p>Battery mAh 4,441mAh</p>
+            <p>Capacity 256GB-1TB</p>
+            <p>Price: 48,900 Baht</p>
+        </div>
+        <a href="#" class="order-button" onclick="on()">จองสินค้า</a>
+        <div id="overlay">
+            <div id="popup">
+                <span id="close-btn" onclick="off()">×</span>
+                <h2>จองสินค้าสำเร็จ</h2>
+                <p>ขอบคุณที่จองสินค้า Iphone 15 Pro Max เราจะทำการเนินการให้เร็วที่สุด</p>
+                <button onclick="off()">ปิด</button>
+            </div>
+        </div>
+    </div>    
+    <div class="image-container "> 
+        <img src="img/sam.jpg" alt="" width="250" height="200"> 
+        <div class="image-details">
+            <h2>Samsung Galaxy S24 Ultra</h2>
+            <h4>Details</h4>
+            <p>Chip Snapdragon 8 Gen 3</p>
+            <p>Camera Main 200MP: 24mm </p>
+            <p>Display 6.8 inch</p>
+            <p>Battery mAh  5,000mAh</p>
+            <p>Capacity 256GB-1TB</p>
+            <p>Price: 46,900 Baht</p>
+        </div>
+        <a href="#" class="order-button" onclick="on()">จองสินค้า</a>
+        <div id="overlay">
+            <div id="popup">
+                <span id="close-btn" onclick="off()">×</span>
+                <h2>จองสินค้าสำเร็จ</h2>
+                <p>ขอบคุณที่จองสินค้า Samsung Galaxy S24 Ultra เราจะทำการเนินการให้เร็วที่สุด</p>
+                <button onclick="off()">ปิด</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container "> 
+        <img src="img/xi.jpg" alt="" width="250" height="200"> 
+        <div class="image-details">
+            <h2>Xiaomi Mi 11 Ultra</h2>
+            <h4>Details</h4>
+            <p>Chip Snapdragon 888</p>
+            <p>Camera Main 48 MP: 12 mm</p>
+            <p>Display 6.8 inch</p>
+            <p>Battery mAh 4,600 mAh</p>
+            <p>Capacity 256GB</p>
+            <p>Price: 25,900 Baht</p>
+        </div>
+        <a href="#" class="order-button" onclick="on()">จองสินค้า</a>
+        <div id="overlay">
+            <div id="popup">
+                <span id="close-btn" onclick="off()">×</span>
+                <h2>จองสินค้าสำเร็จ</h2>
+                <p>ขอบคุณที่จองสินค้า Xiaomi Mi 11 Ultra เราจะทำการเนินการให้เร็วที่สุด</p>
+                <button onclick="off()">ปิด</button>
+            </div>
+        </div>
+    </div>
+    <script src="queuOrder.js"></script>
+</body>
+</html>

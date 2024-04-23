@@ -53,7 +53,7 @@ document.getElementById('root').innerHTML = categories.map((item)=>
         "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
         `</div>
         </div>`
-    )
+    )   
 }).join('')
 
 var cart =[];

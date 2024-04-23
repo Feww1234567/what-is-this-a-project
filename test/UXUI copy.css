@@ -1,0 +1,82 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header img {
+    margin-left: 20px; /* ปรับระยะห่างของโลโก้จากด้านซ้าย */
+    max-height: 50px; /* กำหนดความสูงสูงสุดของโลโก้ */
+}
+
+
+.image-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    overflow-x: scroll; /* เพิ่มการเลื่อนแนวนอน */
+    scroll-snap-type: x mandatory; /* ทำให้เลื่อนตามขอบของรูป */
+}
+
+.image-container > * {
+    flex-shrink: 0;
+}
+
+.image-details {
+    margin-left: 20px;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 300px; /* กำหนดความกว้างของข้อมูลรายละเอียด */
+}
+
+.order-button {
+    margin-top: auto;
+    margin-left: 10px;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border-radius: 300px;
+    padding: 10px 30px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: #333;
+}
+
+/* จัดวางภาพและข้อความให้แสดงใน Box เเยกกัน */
+.image-container > img,
+.image-container > .image-details {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 20px; /* ระยะห่างระหว่างรูปภาพกับข้อความ */
+}
+
+/* ทำให้รูปแสดงตามขอบแนวนอน */
+.image-container > img {
+    flex: 0 0 auto;
+}
+
+/* ทำให้ข้อมูลรายละเอียดยืดหยุ่นให้เต็มพื้นที่ */
+.image-container > .image-details {
+    flex: 1 1 auto;
+}
+
+.image-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    overflow-x: hidden; /* เปลี่ยนเป็น hidden เพื่อซ่อนแถบเลื่อน */
+    scroll-snap-type: x mandatory; /* ทำให้เลื่อนตามขอบของรูป */
+}
