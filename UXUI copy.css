@@ -8,20 +8,27 @@ header {
 }
 
 .container {
-    width: 80%;
+    height: 100px;
+    width: 100px;
     margin: 0 auto;
 }
 
 header img {
+    div.img-resize img {
+    width: 100px;
+    height: 100px; 
+    margin: 0 auto;
     margin-left: 20px; /* ปรับระยะห่างของโลโก้จากด้านซ้าย */
     max-height: 50px; /* กำหนดความสูงสูงสุดของโลโก้ */
+    }
 }
+
 
 
 .image-container {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 25px;
+    margin-bottom: 80px;
     overflow-x: scroll; /* เพิ่มการเลื่อนแนวนอน */
     scroll-snap-type: x mandatory; /* ทำให้เลื่อนตามขอบของรูป */
 }

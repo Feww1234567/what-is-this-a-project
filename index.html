@@ -87,6 +87,11 @@
             font-size: 50px;
             transform: translate(30px, 30px);
           }
+
+          .container img{
+            width: 100px;
+            height: 100px;
+          }
     </style>
 </head>
 <body>
@@ -132,7 +137,7 @@
                 <span id="close-btn" onclick="off()">×</span>
                 <h2 id="popup-title">จองสินค้าสำเร็จ</h2>
                 <p id="popup-message">ขอบคุณที่จองสินค้า Iphone 15 Pro Max เราจะทำการเนินการให้เร็วที่สุด</p>
-                <button onclick="off()">ปิด</button>
+                <button onclick="off1()">ปิด</button>
             </div>
         </div>
     </div>    
@@ -157,7 +162,7 @@
                 <span id="close-btn" onclick="off()">×</span>
                 <h2 id="popup-title">จองสินค้าสำเร็จ</h2>
                 <p id="popup-message">ขอบคุณที่จองสินค้า Samsung Galaxy S24 Ultra เราจะทำการเนินการให้เร็วที่สุด</p>
-                <button onclick="off()">ปิด</button>
+                <button onclick="off2()">ปิด</button>
             </div>
         </div>
     </div>
@@ -182,20 +187,10 @@
                 <span id="close-btn" onclick="off()">×</span>
                 <h2 id="popup-title">จองสินค้าสำเร็จ</h2>
                 <p id="popup-message">ขอบคุณที่จองสินค้า Xiaomi Mi 11 Ultra เราจะทำการเนินการให้เร็วที่สุด</p>
-                <button onclick="off()">ปิด</button>
+                <button onclick="off3()">ปิด</button>
             </div>
         </div>
     </div>
-    <script>
-        function on(productName) {
-            document.getElementById("overlay").style.display = "block";
-            document.getElementById("popup-title").innerText = "จองสินค้าสำเร็จ";
-            document.getElementById("popup-message").innerText = "ขอบคุณที่จองสินค้า " + productName + " เราจะทำการเนินการให้เร็วที่สุด";
-        }
-
-        function off() {
-            document.getElementById("overlay").style.display = "none";
-        }
-    </script>
+    <script src="queuOrder.js"></script>
 </body>
 </html>
